@@ -55,7 +55,7 @@ class ClientHandler implements Runnable {
             while (true) {
                 String input = reader.readLine();
                 
-                if (input.equals("exit")) {
+                if (input == null || input.equals("exit")) {
                 	isStop = true;
                     break;
                 }
