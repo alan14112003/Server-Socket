@@ -5,10 +5,10 @@ COPY . /app
 WORKDIR /app
 
 # Biên dịch ứng dụng
-RUN javac Server.java
+RUN javac ServerParallel.java
 
 # Mở cổng mà server của bạn sẽ lắng nghe
 EXPOSE 2301
 
 # Chạy server khi container được khởi chạy
-CMD ["java", "Server"]
+CMD ["java", "ServerParallel"]
