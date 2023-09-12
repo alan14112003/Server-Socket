@@ -43,10 +43,10 @@ class ClientHandler implements Runnable {
     @Override
     public void run() {
         	BufferedReader reader;
-        	DataOutputStream dos;
+        	PrintWriter writer;
 			try {
 				reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-				dos = new DataOutputStream(clientSocket.getOutputStream());
+				writer = new PrintWriter(clientSocket.getOutputStream(), true);
 			
         	
             Timer timer = new Timer();
@@ -75,8 +75,8 @@ class ClientHandler implements Runnable {
                         String time = new Date().toString();
                         if (!isStop) {
                         	try {
-                                dos.writeUTF(time);
-                                dos.flush(); // Đảm bảo dữ liệu được gửi đi ngay lập tức
+                                writer.println(time.toString());
+                                writer.flush(); // Đảm bảo dữ liệu được gửi đi ngay lập tức
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
