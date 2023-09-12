@@ -72,7 +72,7 @@ class ClientHandler implements Runnable {
                         String time = new Date().toString();
                         if (!isStop) {
                         	try {
-                                writer.println(time.toString());
+                                writer.println(time);
                                 writer.flush(); // Đảm bảo dữ liệu được gửi đi ngay lập tức
                             } catch (Exception e) {
                                 e.printStackTrace();
