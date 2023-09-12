@@ -50,19 +50,22 @@ class ClientHandler implements Runnable {
 			
         	
             Timer timer = new Timer();
-            
+            System.out.println(clientSocket.toString() + " connected");
             
             while (true) {
                 String input = reader.readLine();
                 
                 if (input == null || input.equals("exit")) {
+                    System.out.println(clientSocket.toString() + " exit");
                 	isStop = true;
                     break;
                 }
                 if (input.equals("stop")) {
+                    System.out.println(clientSocket.toString() + " stop");
                     isStop = true;
                 }
                 if (input.equals("run")) {
+                    System.out.println(clientSocket.toString() + " run");
 					isStop = false;
 				}
                 
