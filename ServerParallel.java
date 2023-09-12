@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ServerParallel {
-	private static final int PORT = 2301;
+	private static final int PORT = 10000;
 
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(10);

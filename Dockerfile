@@ -8,7 +8,7 @@ WORKDIR /app
 RUN javac ServerParallel.java
 
 # Mở cổng mà server của bạn sẽ lắng nghe
-EXPOSE 2301
+EXPOSE 10000
 
 # Chạy server khi container được khởi chạy
 CMD ["java", "ServerParallel"]
